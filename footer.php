@@ -29,9 +29,17 @@
 		</ul>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>
 	<!-- /.mod-footer --></footer>
+	<!-- SyntaxHighlighter -->
+	<script src="<?php bloginfo('template_url'); ?>/js/shCore.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/shBrushXml.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/shBrushCss.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/shBrushSass.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/shBrushJScript.js"></script>
 	<script type="text/javascript">
 		SyntaxHighlighter.all()
 	</script>
+	<!-- /SyntaxHighlighter -->
+	<!-- Google Analytics -->
 	<script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-29186068-1']);
@@ -43,6 +51,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 	</script>
+	<!-- /Google Analytics -->
 <?php wp_footer(); ?>
 </body>
 </html>

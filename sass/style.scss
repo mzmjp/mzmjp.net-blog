@@ -247,21 +247,34 @@
 
 @media screen and (min-width: 768px) {
 
+.mod-header-wrap {
+	clear: both;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 10px;
+	max-width: 940px;
+}
+
 .mod-title {
-	font-size: 230%;
+	float: left;
+	margin: 10px 0;
+	padding: 0;
+	font-size: 120%;
+}
+
+.mod-search {
+	float: right;
+	margin: 10px 0;
+	padding: 0;
 }
 
 .mod-entry {
 	margin: 0 auto;
-	padding: 4em 1em 1em;
-	max-width: 960px;
+	padding: 3em 10px 1em;
+	max-width: 940px;
 	&:first-child {
-		padding: 2em 1em 1em;
+		padding: 2em 10px 1em;
 	}
-}
-
-.mod-entry-header {
-	max-width: 960px;
 }
 
 .mod-entry-title {
@@ -269,7 +282,6 @@
 }
 
 .mod-entry-content {
-	max-width: 960px;
 	font-size: 120%;
 	h2 {
 		padding: 0 0 0 0.3em;
@@ -286,8 +298,8 @@
 
 .mod-pager {
 	margin: 0 auto;
-	padding: 0 1em 2em;
-	max-width: 960px;
+	padding: 0 10px 2em;
+	max-width: 940px;
 	ul {
 		li {
 			font-size: 140%;
