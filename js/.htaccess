@@ -1,0 +1,10 @@
+<IfModule mod_headers.c>
+	<FilesMatch "\.(js)$">
+		Header append Vary Accept-Encoding
+	</FilesMatch>
+</IfModule>
+
+AddOutputFilterByType DEFLATE application/x-javascript
+
+ExpiresActive On
+ExpiresDefault "access plus 3 month"

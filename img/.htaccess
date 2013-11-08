@@ -1,0 +1,4 @@
+AddOutputFilterByType DEFLATE image/svg+xml
+
+ExpiresActive On
+ExpiresDefault "access plus 3 month"

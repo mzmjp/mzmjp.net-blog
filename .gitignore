@@ -1,0 +1,17 @@
+*.html
+
+#Mac
+.DS_Store
+
+#Sass/Compass
+.sass-cache
+config.rb
+
+#Sublime Text 2
+*.sublime-*
+
+#Dreamweaver
+_notes/
+
+#Other
+misc
