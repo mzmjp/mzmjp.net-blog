@@ -1,5 +1,5 @@
 	<footer class="mod-footer">
-		<p class="mod-myicon"><a href="http://mzmjp.net"><img src="<?php bloginfo('template_url'); ?>/img/jp.png" width="60" height="60" alt="mzmjp"></a></p>
+		<p class="mod-myicon"><a href="http://mzmjp.net"><img src="<?php bloginfo('template_url'); ?>/img/jp@2x.png" width="60" height="60" alt="mzmjp"></a></p>
 		<ul class="mod-webservice">
 			<li><a href="https://twitter.com/mzmjp">
 				<object data="<?php bloginfo('template_url'); ?>/img/icon/twitter.svg" type="image/svg+xml" width="32" height="32">

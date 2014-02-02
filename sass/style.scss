@@ -208,7 +208,6 @@
 	margin: 0 auto 1.6em;
 	text-align: center;
 	img {
-		border-radius: 150px;
 		@include transition(.4s);
 		&:hover {
 			opacity: .7;
