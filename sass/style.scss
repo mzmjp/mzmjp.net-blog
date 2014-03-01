@@ -2,6 +2,9 @@
 @import "normalize";
 @import "compass/css3";
 
+/* variable */
+$link-color: #39a1c5;
+
 .mod-header {
 	background: url(img/bg.png);
 }
@@ -100,7 +103,7 @@
 	a {
 		font-weight: bold;
 		&:link,&:visited {
-			color: #39a1c5;
+			color: $link-color;
 			text-decoration: none;
 		}
 		&:hover {
@@ -187,7 +190,7 @@
 			}
 			a {
 				&:link,&:visited {
-					color: #39a1c5;
+					color: $link-color;
 					text-decoration: none;
 				}
 				&:hover {
