@@ -1,17 +1,19 @@
-*.html
+#Common
 
-#Mac
+##Mac
 .DS_Store
 
-#Sass/Compass
+##Sass/Compass
 .sass-cache
 config.rb
 
-#Sublime Text 2
+##Sublime Text 2
 *.sublime-*
 
-#Dreamweaver
+##Dreamweaver
 _notes/
 
 #Other
-misc
+*.html
+doc
+raw
