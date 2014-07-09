@@ -1,57 +1,63 @@
 	<footer class="mod-footer">
-		<p class="mod-myicon"><a href="http://mzmjp.net"><img src="<?php bloginfo('template_url'); ?>/img/jp@2x.png" width="60" height="60" alt="mzmjp"></a></p>
-		<ul class="mod-webservice">
-			<li><a href="https://twitter.com/mzmjp">
-				<object data="<?php bloginfo('template_url'); ?>/img/icon/twitter.svg" type="image/svg+xml" width="32" height="32">
-					<img src="<?php bloginfo('template_url'); ?>/img/icon/twitter.png" width="32" height="32" alt="twitter">
-				</object>
-			</a></li>
-			<li><a href="http://www.lastfm.jp/user/mzmjp/">
-				<object data="<?php bloginfo('template_url'); ?>/img/icon/lastfm.svg" type="image/svg+xml" width="32" height="32">
-					<img src="<?php bloginfo('template_url'); ?>/img/icon/lastfm.png" width="32" height="32" alt="last.fm">
-				</object>
-			</a></li>
-			<li><a href="http://mzmjp.tumblr.com/">
-				<object data="<?php bloginfo('template_url'); ?>/img/icon/tumblr.svg" type="image/svg+xml" width="32" height="32">
-					<img src="<?php bloginfo('template_url'); ?>/img/icon/tumblr.png" width="32" height="32" alt="tumblr">
-				</object>
-			</a></li>
-			<li><a href="http://instagram.com/mzmjp">
-				<object data="<?php bloginfo('template_url'); ?>/img/icon/instagram.svg" type="image/svg+xml" width="32" height="32">
-					<img src="<?php bloginfo('template_url'); ?>/img/icon/instagram.png" width="32" height="32" alt="instagram">
-				</object>
-			</a></li>
-			<li><a href="http://www.flickr.com/photos/mzmjp/">
-				<object data="<?php bloginfo('template_url'); ?>/img/icon/flickr.svg" type="image/svg+xml" width="32" height="32">
-					<img src="<?php bloginfo('template_url'); ?>/img/icon/flickr.png" width="32" height="32" alt="flickr">
-				</object>
-			</a></li>
-		</ul>
+		<div class="mod-footer-wrap">
+			<div class="mod-footer-block mod-about-search">
+				<h1>このブログについて</h1>
+				<p>このブログでは、mzmjp が「Web制作」をテーマに勉強したことやハマってしまったことをメモしています。このブログについての詳細や筆者に関しての情報は<a href="<?php bloginfo('url'); ?>/about">about ページ</a>にてご確認下さい。</p>
+				<div id="search">
+					<h1>サイト内検索</h1>
+					<div class="mod-search-content">
+						<?php get_search_form(); ?>
+					<!-- /.mod-search-content --></div>
+				<!-- /#search --></div>
+			<!-- /.mod-about-search --></div>
+			<div class="mod-footer-block mod-latest-entry">
+				<h1>最新記事一覧</h1>
+				<ol>
+				<?php
+				$args = array( 'posts_per_page' => 5, 'order'=> 'DESC', 'orderby' => 'date' );
+				$postslist = get_posts( $args );
+				foreach ( $postslist as $post ) :
+				  setup_postdata( $post ); ?> 
+				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+				<?php
+				endforeach; 
+				wp_reset_postdata();
+				?>
+				</ol>
+			<!-- /.mod-latest-entry --></div>
+		<!-- /.mod-footer-wrap --></div>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>
 	<!-- /.mod-footer --></footer>
-	<!-- SyntaxHighlighter -->
-	<script src="<?php bloginfo('template_url'); ?>/js/shCore.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/shBrushXml.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/shBrushCss.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/shBrushSass.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/shBrushJScript.js"></script>
-	<script type="text/javascript">
-		SyntaxHighlighter.all()
-	</script>
-	<!-- /SyntaxHighlighter -->
 	<!-- Google Analytics -->
-	<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29186068-1']);
-  _gaq.push(['_trackPageview']);
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	  ga('create', 'UA-29186068-1', 'mzmjp.net');
+	  ga('send', 'pageview');
+
 	</script>
 	<!-- /Google Analytics -->
+	<!-- Scroll -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('a[href^=#]').click(function(){
+	    var href = $(this).attr('href');
+	    var location = $(href).offset().top;
+	    $('html,body').animate({
+	        scrollTop:location
+	    }, 600);
+	    $('#s').focus();
+	    return false;
+		});
+	</script>
+	<!-- /Scroll -->
+	<!-- Google Code Prettify -->
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/run_prettify.js"></script>
+	<script>$(function(){prettyPrint()});</script>
+	<!-- /Google Code Prettify -->
 <?php wp_footer(); ?>
 </body>
 </html>

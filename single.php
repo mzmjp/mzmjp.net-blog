@@ -12,33 +12,6 @@
 <?php the_content(); ?>
 			<!-- /.mod-entry-content --></div>
 		<!-- /.mod-entry --></article>
-		<aside class="mod-entry-ad">
-<?php if(wp_is_mobile()) { ?>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-7678557917942331";
-/* mzmjp.net/blog - 320x50 */
-google_ad_slot = "3458638261";
-google_ad_width = 320;
-google_ad_height = 50;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-<?php } else { ?>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-7678557917942331";
-/* mzmjp.net/blog - 728x90 */
-google_ad_slot = "6551705463";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-<?php } ?>
-		<!-- /.mod-entry-ad --></aside>
 <?php endwhile; ?>
 		<div class="mod-pager">
 			<ul>

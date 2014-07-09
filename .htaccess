@@ -1,0 +1,10 @@
+<IfModule mod_headers.c>
+	<FilesMatch "\.(css)$">
+		Header append Vary Accept-Encoding
+	</FilesMatch>
+</IfModule>
+
+AddOutputFilterByType DEFLATE text/css
+
+ExpiresActive On
+ExpiresDefault "access plus 3 month"
