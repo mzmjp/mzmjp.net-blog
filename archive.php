@@ -12,7 +12,7 @@
 <?php the_content(); ?>
 			<!-- /.mod-entry-content --></div>
 			<footer class="mod-entry-footer">
-				<p class="mod-entry-tags"><?php the_tags('Tags: ',', ',''); ?></p>
+				<p class="mod-entry-tags"><?php the_tags('<span class="icon-tag"></span>Tags: ',', ',''); ?></p>
 				<p class="mod-entry-parmalink"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">パーマリンク</a></p>
 			<!-- /.mod-entry-footer --></footer>
 		<!-- /.mod-entry --></article>
