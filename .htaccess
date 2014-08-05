@@ -7,4 +7,4 @@
 AddOutputFilterByType DEFLATE text/css
 
 ExpiresActive On
-ExpiresDefault "access plus 3 month"
+ExpiresDefault "access plus 1 week"
