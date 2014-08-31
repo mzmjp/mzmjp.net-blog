@@ -5,7 +5,7 @@
 @import "compass/css3";
 
 /* variable */
-$link-color: #39a1c5;
+$link-color: #39a1c5; //#39a1c5
 
 .mod-header {
 	background: $link-color url(img/bg@2x.png) repeat 3px 3px;
@@ -214,6 +214,10 @@ $link-color: #39a1c5;
 
 .mod-entry-tags {
 	margin: 0;
+}
+
+.mod-entry-tagname {
+	display: inline;
 	a {
 		margin: 0 .2em 0 0;
 		padding: .2em .4em;
