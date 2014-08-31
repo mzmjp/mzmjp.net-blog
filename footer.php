@@ -55,7 +55,7 @@
 	</script>
 	<!-- /Scroll -->
 	<!-- Google Code Prettify -->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/run_prettify.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/prettify.js"></script>
 	<script>$(function(){prettyPrint()});</script>
 	<!-- /Google Code Prettify -->
 <?php wp_footer(); ?>
