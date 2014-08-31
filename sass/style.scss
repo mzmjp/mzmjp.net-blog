@@ -205,6 +205,18 @@ $link-color: #39a1c5; //#39a1c5
 			border: dashed 1px rgba(0,0,0,.5);
 		}
 	}
+	.iframewrap {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
 
 .mod-entry-footer {
