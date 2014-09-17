@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Archives
+*/
+?>
+
 <?php get_header(); ?>
 
 	<div class="mod-main">
@@ -11,10 +17,12 @@
 			<div class="mod-entry-content">
 <?php the_content(); ?>
 			<!-- /.mod-entry-content --></div>
+
 			<footer class="mod-entry-footer">
 				<?php the_tags('<ul class="mod-entry-tags"><li class="mod-entry-tagname icon-tag">','</li><li class="mod-entry-tagname icon-tag">','</li></ul>');?>
 				<p class="mod-entry-parmalink"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">パーマリンク</a></p>
 			<!-- /.mod-entry-footer --></footer>
+
 		<!-- /.mod-entry --></article>
 <?php endwhile; ?>
 		<div class="mod-pager">
