@@ -40,20 +40,6 @@
 
 	</script>
 	<!-- /Google Analytics -->
-	<!-- Scroll -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript">
-		$('a[href^=#]').click(function(){
-	    var href = $(this).attr('href');
-	    var location = $(href).offset().top;
-	    $('html,body').animate({
-	        scrollTop:location
-	    }, 600);
-	    $('#s').focus();
-	    return false;
-		});
-	</script>
-	<!-- /Scroll -->
 	<!-- Google Code Prettify -->
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/prettify.js"></script>
 	<script>$(function(){prettyPrint()});</script>

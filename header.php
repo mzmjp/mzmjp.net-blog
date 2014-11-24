@@ -13,8 +13,8 @@
 	<header class="mod-header">
 		<div class="mod-header-wrap">
 			<h1 class="mod-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-			<div class="mod-search-button">
-				<a href="#search"><label for="s" form="searchform"><span class="icon-search" aria-hidden="true"></span>検索</label></a>
+			<div class="mod-about">
+				<a href="<?php bloginfo('url'); ?>/about"><span class="icon-info-circled" aria-hidden="true"></span>about</a>
 			<!-- /.mod-search-button--></div>
 		<!-- /.mod-header-wrap --></div>
 	<!-- /.mod-header --></header>
