@@ -1,4 +1,6 @@
 @charset "utf-8";
+
+/* @import */
 @import "normalize";
 @import "fontello";
 @import "prettify";
@@ -14,14 +16,25 @@ $link-color: #39a1c5;
 .mod-header-wrap {
 	clear: both;
 	overflow: hidden;
+	height: 50px;
+	&:before {
+		content: "";
+		display: table;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 .mod-title {
 	float: left;
 	margin: 0 0 0 3%;
-	padding: 0.5em 0 0;
+	height: 50px;
 	text-shadow: 0 2px 0 rgba(51,48,22,0.5);
 	letter-spacing: -0.03em;
+	line-height: 50px;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 140%;
 	a {
@@ -35,13 +48,15 @@ $link-color: #39a1c5;
 	}
 }
 
-.mod-search-button {
+.mod-about {
 	float: right;
+	height: 50px;
 	color: #feffff;
 	background: #226076;
+	line-height: 50px;
 	a {
 		display: block;
-		padding: .8em;
+		padding: 0 .8em;
 		&:link,&:visited,&:hover {
 			height: 100%;
 			color: #feffff;
@@ -109,7 +124,7 @@ $link-color: #39a1c5;
 	}
 	dl {
 		dt {
-			margin: 0 0 0 1em;
+			margin: 0 0 0 1.4em;
 			&:before {
 				margin: 0 0 0 -1.4em;
 				padding: 0 0.4em 0 0;
@@ -117,7 +132,7 @@ $link-color: #39a1c5;
 			}
 		}
 		dd {
-			margin: 0.6em 0 1.6em 2.4em;
+			margin: 0.2em 0 1.2em 1.4em;
 			line-height: 1.5;
 		}
 	}
@@ -253,8 +268,6 @@ $link-color: #39a1c5;
 	}
 }
 
-
-
 .mod-pager {
 	overflow: hidden;
 	margin: 0 4%;
@@ -324,12 +337,14 @@ $link-color: #39a1c5;
 			outline: solid 4px #39a1c5;
 		}
 		&[type="text"] {
-			margin: 0 4px 0 0 ;
+			margin: 0 4px 0 0;
+			width: 60%;
 			border: solid 2px #feffff;
 		}
 		&[type="submit"] {
 			color: #39a1c5;
 			border: 0;
+			font-weight: bold;
 		}
 	}
 }
@@ -363,8 +378,8 @@ $link-color: #39a1c5;
 
 .mod-title {
 	float: left;
-	margin: 10px 0;
 	padding: 0;
+	margin: 0;
 	font-size: 150%;
 }
 
@@ -399,6 +414,7 @@ $link-color: #39a1c5;
 	}
 	dl {
 		dd {
+			margin: 0.6em 0 1.6em 2.4em;
 			line-height: 1.7;
 		}
 	}
