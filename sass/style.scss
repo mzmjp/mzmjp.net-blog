@@ -10,7 +10,7 @@
 $link-color: #1122cc;
 
 .mod-header {
-	background: #39a1c5 url(img/bg@2x.png) repeat 3px 3px ;
+	background: $link-color url(img/bg@2x.png) repeat 3px 3px;
 }
 
 .mod-header-wrap {
