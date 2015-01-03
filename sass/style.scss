@@ -64,13 +64,19 @@ $link-color: #1122cc;
 	color: #feffff;
 	background: #226076;
 	line-height: 50px;
+	&:hover {
+		background: #feffff;
+	}
 	a {
 		display: block;
 		padding: 0 .8em;
-		&:link,&:visited,&:hover {
+		&:link,&:visited {
 			height: 100%;
 			color: #feffff;
 			text-decoration: none;
+		}
+		&:hover {
+			color: #226076;
 		}
 		label {
 			cursor: pointer;
