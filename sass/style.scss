@@ -50,6 +50,12 @@ $link-color: #1122cc;
 		&:hover {
 			text-decoration: underline;
 		}
+		&:focus {
+			background: #226076;
+			padding: .1em;
+			outline: solid 3px #feffff;
+			transition: all .1s linear;
+		}
 	}
 	@media screen and (min-width: 768px) {
 		padding: 0;
@@ -64,19 +70,18 @@ $link-color: #1122cc;
 	color: #feffff;
 	background: #226076;
 	line-height: 50px;
-	&:hover {
-		background: #feffff;
-	}
 	a {
 		display: block;
 		padding: 0 .8em;
+		transition: all .2s linear;
 		&:link,&:visited {
 			height: 100%;
 			color: #feffff;
 			text-decoration: none;
 		}
-		&:hover {
+		&:hover, &:focus {
 			color: #226076;
+			background: #feffff;
 		}
 		label {
 			cursor: pointer;
@@ -120,6 +125,11 @@ $link-color: #1122cc;
 		}
 		&:hover {
 			text-decoration: underline;
+		}
+		&:focus {
+			color: #feffff;
+			background: #000;
+			transition: all .1s linear;
 		}
 	}
 }
@@ -192,6 +202,11 @@ $link-color: #1122cc;
 		}
 		&:hover {
 			text-decoration: underline;
+		}
+		&:focus {
+			color: #feffff;
+			background: #12c;
+			transition: all .1s linear;
 		}
 	}
 	img {
@@ -305,13 +320,21 @@ $link-color: #1122cc;
 		&:hover {
 			text-decoration: underline;
 		}
+		&:focus {
+			color: #feffff;
+			background: #12c;
+			font-weight: bold;
+		}
 	}
 }
 
 .mod-entry-parmalink {
 	margin: .6em 0 0;
 	a {
-		&:link,&:visited {
+		&:focus {
+			color: #feffff;
+			background: #12c;
+			font-weight: bold;
 		}
 	}
 }
@@ -347,6 +370,11 @@ $link-color: #1122cc;
 				&:hover {
 					text-decoration: underline;
 				}
+				&:focus {
+				color: #feffff;
+				background: #12c;
+				font-weight: bold;
+				}
 			}
 		}
 	}
@@ -379,9 +407,15 @@ $link-color: #1122cc;
 		font-size: 130%;
 		font-weight: normal;
 	}
-	a:link,a:visited,a:hover {
-		color: #feffff;
-		text-decoration: underline;
+	a {
+		&:link, &:visited, &:hover {
+			color: #feffff;
+			text-decoration: underline;
+		}
+		&:focus {
+			color: #226076;
+			background: #feffff;
+		}
 	}
 }
 
