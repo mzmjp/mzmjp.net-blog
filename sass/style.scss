@@ -313,8 +313,9 @@ $link-color: #1122cc;
 	a {
 		margin: 0 .2em 0 0;
 		padding: .2em .4em;
+		border: dotted 1px #aaa;
 		border-radius: 4px;
-		background: #fff;
+		background: #eee;
 		&:link,&:visited {
 			color: $link-color;
 			text-decoration: none;
