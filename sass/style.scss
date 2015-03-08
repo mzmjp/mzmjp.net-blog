@@ -45,7 +45,8 @@ $transition-01s: all .1s linear;
 	font-size: 140%;
 	a {
 		color: #fffce2;
-		&:link,&:visited {
+		transition: $transition-01s;
+		&:link, &:visited {
 			text-decoration: none;
 		}
 		&:hover {
@@ -55,7 +56,6 @@ $transition-01s: all .1s linear;
 			background: #226076;
 			padding: .1em;
 			outline: solid 3px #feffff;
-			transition: $transition-01s;
 		}
 	}
 	@media screen and (min-width: 768px) {
@@ -75,7 +75,7 @@ $transition-01s: all .1s linear;
 		display: block;
 		padding: 0 .8em;
 		transition: $transition-01s;
-		&:link,&:visited {
+		&:link, &:visited {
 			height: 100%;
 			color: #feffff;
 			text-decoration: none;
@@ -121,17 +121,14 @@ $transition-01s: all .1s linear;
 		font-size: 200%;
 	}
 	a {
-		&:link,&:visited {
+		transition: $transition-01s;
+		&:link, &:visited {
 			color: #000;
 			text-decoration: none;
 		}
-		&:hover {
-			text-decoration: underline;
-		}
-		&:focus {
+		&:hover, &:focus {
 			color: #feffff;
 			background: #000;
-			transition: $transition-01s;
 		}
 	}
 }
@@ -198,17 +195,15 @@ $transition-01s: all .1s linear;
 	}
 	a {
 		font-weight: bold;
+		transition: $transition-01s;
 		&:link,&:visited {
 			color: $link-color;
-			text-decoration: none;
-		}
-		&:hover {
 			text-decoration: underline;
 		}
-		&:focus {
+		&:hover, &:focus {
 			color: #feffff;
 			background: #12c;
-			transition: $transition-01s;
+
 		}
 	}
 	img {
@@ -317,14 +312,12 @@ $transition-01s: all .1s linear;
 		border: dotted 1px #aaa;
 		border-radius: 4px;
 		background: #eee;
-		&:link,&:visited {
+		transition: $transition-01s;
+		&:link, &:visited {
 			color: $link-color;
 			text-decoration: none;
 		}
-		&:hover {
-			text-decoration: underline;
-		}
-		&:focus {
+		&:hover, &:focus {
 			color: #feffff;
 			background: #12c;
 			font-weight: bold;
@@ -335,7 +328,12 @@ $transition-01s: all .1s linear;
 .mod-entry-parmalink {
 	margin: .6em 0 0;
 	a {
-		&:focus {
+		transition: $transition-01s;
+		&:link, &:visited {
+			color: $link-color;
+			text-decoration: underline;
+		}
+		&:hover, &:focus {
 			color: #feffff;
 			background: #12c;
 			font-weight: bold;
@@ -361,23 +359,21 @@ $transition-01s: all .1s linear;
 			float: left;
 			font-size: 100%;
 			@media screen and (min-width: 768px) {
-				font-size: 140%;
+				font-size: 120%;
 			}
 			&:nth-child(2) {
 				float: right;
 			}
 			a {
+				transition: $transition-01s;
 				&:link,&:visited {
 					color: $link-color;
-					text-decoration: none;
-				}
-				&:hover {
 					text-decoration: underline;
 				}
-				&:focus {
-				color: #feffff;
-				background: #12c;
-				font-weight: bold;
+				&:hover, &:focus {
+					color: #feffff;
+					background: #12c;
+					font-weight: bold;
 				}
 			}
 		}
@@ -412,11 +408,12 @@ $transition-01s: all .1s linear;
 		font-weight: normal;
 	}
 	a {
-		&:link, &:visited, &:hover {
+		transition: $transition-01s;
+		&:link, &:visited {
 			color: #feffff;
 			text-decoration: underline;
 		}
-		&:focus {
+		&:hover, &:focus {
 			color: #226076;
 			background: #feffff;
 		}
