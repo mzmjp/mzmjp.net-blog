@@ -5,7 +5,7 @@
 <?php while (have_posts()) : the_post(); ?>
 		<article class="mod-entry">
 			<header class="mod-entry-header">
-				<div class="mod-entry-date"><span class="icon-calendar" aria-hidden="true"></span><time><?php the_date("Y-m-d");?></time></div>
+				<div class="mod-entry-date"><span class="icon-calendar" aria-hidden="true"></span><time><?php the_time("Y-m-d");?></time></div>
 				<h1 class="mod-entry-title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 			<!-- /.mod-entry-header --></header>
 			<div class="mod-entry-content">
