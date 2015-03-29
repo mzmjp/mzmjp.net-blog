@@ -9,7 +9,7 @@
 <title><?php if ( is_singular() ) { ?><?php wp_title('-',true,'right'); ?><?php } ?><?php bloginfo('name'); ?></title>
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> onload="prettyPrint()">
 	<header class="mod-header">
 		<div class="mod-header-wrap">
 			<h1 class="mod-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
