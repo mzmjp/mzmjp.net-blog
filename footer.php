@@ -1,9 +1,9 @@
-	<footer class="mod-footer">
+	<footer class="mod-footer" role="contentinfo">
 		<div class="mod-footer-wrap">
 			<div class="mod-footer-block mod-about-search">
 				<h1>このブログについて</h1>
 				<p>このブログでは、mzmjp が「Web制作」をテーマに勉強したことやハマってしまったことをメモしています。このブログについての詳細や筆者に関しての情報は<a href="<?php bloginfo('url'); ?>/about">about ページ</a>にてご確認下さい。</p>
-				<div id="search">
+				<div id="search" role="search">
 					<h1>サイト内検索</h1>
 					<div class="mod-search-content">
 						<?php get_search_form(); ?>

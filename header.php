@@ -10,7 +10,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> onload="prettyPrint()">
-	<header class="mod-header">
+	<header class="mod-header" role="banner">
 		<div class="mod-header-wrap">
 			<h1 class="mod-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 			<div class="mod-about">

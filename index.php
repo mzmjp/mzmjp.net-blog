@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="mod-main">
+	<div class="mod-main" role="main">
 <?php if ( have_posts() ) : ?>
 <?php while (have_posts()) : the_post(); ?>
 		<article class="mod-entry">
