@@ -9,6 +9,13 @@
 		$query -> set('post_type', 'post');
 	}
 	return $query;
-}
-add_filter('pre_get_posts', 'search_filter');
+	}
+	add_filter('pre_get_posts', 'search_filter');
+
+	#検索結果を日付順で表示する
+	#via : http://www.nigauri.me/tech/wordpress/customize_wordpress/custom_posts_search_orderby
+	add_filter('posts_search_orderby', custom_posts_search_orderby);
+	function custom_posts_search_orderby() {
+		return ' post_date desc ';
+	}
 ?>
