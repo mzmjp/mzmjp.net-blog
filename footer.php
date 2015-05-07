@@ -6,7 +6,11 @@
 				<div id="search" role="search">
 					<h1>サイト内検索</h1>
 					<div class="mod-search-content">
-						<?php get_search_form(); ?>
+						<form method="get" class="searchform" action="<?php echo home_url( '/' ); ?>">
+							<label for="search--footer">検索</label>
+							<input type="text" value="" name="s" id="search--footer" />
+							<input type="submit" value="検索する" />
+						</form>
 					<!-- /.mod-search-content --></div>
 				<!-- /#search --></div>
 			<!-- /.mod-about-search --></div>
@@ -28,6 +32,26 @@
 		<!-- /.mod-footer-wrap --></div>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>
 	<!-- /.mod-footer --></footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- Menu Toggle -->
+	<script type="text/javascript">
+	$(function(){
+		var menu = $('.mod-menu');
+		var button = $('.mod-menu-button');
+		menu.css('display', 'none');
+		button.click(function(event){
+			event.preventDefault();
+			if(menu.css('display') == 'none') {
+				menu.slideDown(70, 'linear');
+				button.attr('aria-expanded', 'true').html('<span class="icon-cancel" aria-hidden="true"></span>Close');
+				} else {
+					menu.slideUp(70, 'linear');
+					button.attr('aria-expanded', 'false').html('<span class="icon-menu" aria-hidden="true"></span>Menu');
+				}
+		});
+	});
+	</script>
+	<!-- /Menu Toggle -->
 	<!-- Google Analytics -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -8,16 +8,12 @@
 
 /* variable */
 $link-color: #1122cc;
+$bg-color: #fff;
+$second-color: #226076;
 $transition-01s: all .1s linear;
 
-.mod-header {
-	background: #39a1c5 url(img/bg@2x.png) repeat 3px 3px ;
-}
-
-.mod-header-wrap {
-	clear: both;
-	overflow: hidden;
-	height: 50px;
+/* clearfix */
+%clearfix {
 	&:before {
 		content: "";
 		display: table;
@@ -27,6 +23,20 @@ $transition-01s: all .1s linear;
 		display: table;
 		clear: both;
 	}
+}
+
+.mod-header {
+}
+
+.mod-title {
+	background: #39a1c5 url(img/bg@2x.png) repeat 3px 3px ;
+}
+
+.mod-title-inner {
+	clear: both;
+	overflow: hidden;
+	height: 50px;
+	@extend %clearfix;
 	@media screen and (min-width: 768px) {
 		margin: 0 auto;
 		padding: 0 10px;
@@ -34,7 +44,7 @@ $transition-01s: all .1s linear;
 	}
 }
 
-.mod-title {
+.mod-title-logo {
 	float: left;
 	margin: 0 0 0 3%;
 	height: 50px;
@@ -46,14 +56,15 @@ $transition-01s: all .1s linear;
 	a {
 		color: #fffce2;
 		transition: $transition-01s;
-		&:link, &:visited {
+		&:link,
+		&:visited {
 			text-decoration: none;
 		}
 		&:hover {
 			text-decoration: underline;
 		}
 		&:focus {
-			background: #226076;
+			background: $second-color;
 			padding: .1em;
 			outline: solid 3px #feffff;
 		}
@@ -65,34 +76,133 @@ $transition-01s: all .1s linear;
 	}
 }
 
-.mod-about {
+.mod-menu-button {
 	float: right;
+	display: block;
+	padding: 0 .8em;
 	height: 50px;
 	color: #feffff;
-	background: #226076;
+	background: $second-color;
 	line-height: 50px;
+	cursor: pointer;
+	&:visited {
+		color: #feffff;
+		background: $second-color;
+	}
+	&:hover,
+	&:focus {
+		color: $second-color;
+		background: #feffff;
+	}
+	&:active {
+		color: #feffff;
+		background: $second-color;
+	}
+}
+
+.mod-menu {
+}
+
+.mod-menu-inner {
+	margin: 0 auto;
+	max-width: 940px;
+	background: $second-color;
+	@extend %clearfix;
+}
+
+.mod-menu-about {
+	min-height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: $second-color;
+	border-top: solid 1px rgba(#feffff,.4);
+	@media screen and (min-width: 768px) {
+		float: left;
+		width: 30%;
+		border-top: none;
+		border-right: solid 1px darken($second-color, 10%);
+		box-shadow: 1px 0 0 lighten($second-color, 10%);
+	}
 	a {
 		display: block;
-		padding: 0 .8em;
+		color: #feffff;
+		text-decoration: none;
+		font-weight: bold;
 		transition: $transition-01s;
-		&:link, &:visited {
-			height: 100%;
-			color: #feffff;
-			text-decoration: none;
-		}
-		&:hover, &:focus {
-			color: #226076;
+		&:hover,
+		&:focus {
+			color: $second-color;
 			background: #feffff;
 		}
-		label {
-			cursor: pointer;
+	}
+}
+
+.mod-menu-search {
+	min-height: 50px;
+	background: $second-color;
+	border-top: solid 1px rgba(#feffff,.4);
+	@media screen and (min-width: 768px) {
+		float: right;
+		width: 60%;
+		border-top: none;
+	}
+}
+
+.mod-search-content {
+	padding: 0 .6em;
+	min-height: 100px;
+	background: $second-color;
+	@media screen and (min-width: 768px) {
+		text-align: right;
+		min-height: 50px;
+	}
+	form {
+		line-height: 50px;
+		text-align: center;
+	}
+	label {
+		display: block;
+		min-height: 50px;
+		color: #feffff;
+		font-weight: bold;
+		text-align: center;
+		@media screen and (min-width: 768px) {
+			display: inline-block;
+			width: 10%;
+		}
+	}
+	input {
+		padding: 5px;
+		background: #feffff;
+		border-radius: 0;
+		border: solid 2px #feffff;
+		-webkit-appearance: none;
+		&:focus {
+			outline: solid 4px #39a1c5;
+		}
+		&[type="text"] {
+			margin: 0 4px 0 0;
+			width: 60%;
+			color: #000;
+		}
+		&[type="submit"] {
+			width: 30%;
+			color: #39a1c5;
+			font-weight: bold;
+			&:active {
+				position: relative;
+				top: 1px;
+			}
+			@media screen and (min-width: 768px) {
+				width: 20%;
+			}
 		}
 	}
 }
 
 .mod-main {
 	color: #333;
-	background: #fff;
+	background: $bg-color;
 }
 
 .mod-entry {
@@ -113,6 +223,10 @@ $transition-01s: all .1s linear;
 	}
 }
 
+.mod-entry-header {
+	color: #000;
+}
+
 .mod-entry-title {
 	margin: 0;
 	font-size: 130%;
@@ -122,11 +236,13 @@ $transition-01s: all .1s linear;
 	}
 	a {
 		transition: $transition-01s;
-		&:link, &:visited {
+		&:link,
+		&:visited {
 			color: #000;
 			text-decoration: none;
 		}
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			color: #feffff;
 			background: #000;
 		}
@@ -140,6 +256,7 @@ $transition-01s: all .1s linear;
 	}
 	h2 {
 		padding: 0 0 0 0.2em;
+		color: #000;
 		font-size: 120%;
 		border-left: solid 10px #000;
 		@media screen and (min-width: 768px) {
@@ -149,6 +266,7 @@ $transition-01s: all .1s linear;
 	}
 	h3 {
 		padding: 0 0 0 0.2em;
+		color: #000;
 		font-size: 115%;
 		border-left: solid 5px #000;
 		@media screen and (min-width: 768px) {
@@ -157,12 +275,27 @@ $transition-01s: all .1s linear;
 		}
 	}
 	h4 {
+		color: #000;
 		font-size: 110%;
 		@media screen and (min-width: 768px) {
 			font-size: 120%;
 		}
 		&:before {
 			content: "\25a0";
+		}
+	}
+	a {
+		font-weight: bold;
+		transition: $transition-01s;
+		&:link,
+		&:visited {
+			color: $link-color;
+			text-decoration: underline;
+		}
+		&:hover,
+		&:focus {
+			color: #feffff;
+			background: #12c;
 		}
 	}
 	p {
@@ -193,23 +326,11 @@ $transition-01s: all .1s linear;
 			}
 		}
 	}
-	a {
-		font-weight: bold;
-		transition: $transition-01s;
-		&:link,&:visited {
-			color: $link-color;
-			text-decoration: underline;
-		}
-		&:hover, &:focus {
-			color: #feffff;
-			background: #12c;
-
-		}
-	}
 	img {
 		max-width: 100%;
 		height: auto;
-		border: solid 4px transparent;
+		vertical-align: bottom;
+		border: solid 4px #fff;
 		box-shadow: 0 0 1px #333;
 		@include box-sizing(border-box);
 	}
@@ -226,7 +347,7 @@ $transition-01s: all .1s linear;
 		display: block;
 		overflow: scroll;
 		padding: 10px 5px;
-		background: #fff;
+		background: $bg-color;
 		white-space: pre;
 	}
 	.prettyprint {
@@ -280,7 +401,7 @@ $transition-01s: all .1s linear;
 		p {
 			padding: 1em;
 			text-decoration: none;
-			background: #fff;
+			background: $bg-color;
 			border: dashed 1px rgba(0,0,0,.5);
 		}
 	}
@@ -316,11 +437,13 @@ $transition-01s: all .1s linear;
 		border-radius: 4px;
 		background: #eee;
 		transition: $transition-01s;
-		&:link, &:visited {
+		&:link,
+		&:visited {
 			color: $link-color;
 			text-decoration: none;
 		}
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			color: #feffff;
 			background: #12c;
 			font-weight: bold;
@@ -332,11 +455,13 @@ $transition-01s: all .1s linear;
 	margin: .6em 0 0;
 	a {
 		transition: $transition-01s;
-		&:link, &:visited {
+		&:link,
+		&:visited {
 			color: $link-color;
 			text-decoration: underline;
 		}
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			color: #feffff;
 			background: #12c;
 			font-weight: bold;
@@ -369,11 +494,13 @@ $transition-01s: all .1s linear;
 			}
 			a {
 				transition: $transition-01s;
-				&:link,&:visited {
+				&:link,
+				&:visited {
 					color: $link-color;
 					text-decoration: underline;
 				}
-				&:hover, &:focus {
+				&:hover,
+				&:focus {
 					color: #feffff;
 					background: #12c;
 					font-weight: bold;
@@ -385,7 +512,7 @@ $transition-01s: all .1s linear;
 
 .mod-footer {
 	padding: .6em 0 1em;
-	background: #226076;
+	background: $second-color;
 }
 
 .mod-footer-wrap {
@@ -400,7 +527,6 @@ $transition-01s: all .1s linear;
 .mod-footer-block {
 	margin: 3%;
 	color: #feffff;
-	font-size: 90%;
 	@media screen and (min-width: 768px) {
 		margin: 0;
 		width: 48%;
@@ -412,12 +538,14 @@ $transition-01s: all .1s linear;
 	}
 	a {
 		transition: $transition-01s;
-		&:link, &:visited {
+		&:link,
+		&:visited {
 			color: #feffff;
 			text-decoration: underline;
 		}
-		&:hover, &:focus {
-			color: #226076;
+		&:hover,
+		&:focus {
+			color: $second-color;
 			background: #feffff;
 		}
 	}
@@ -429,38 +557,6 @@ $transition-01s: all .1s linear;
 	}
 	p {
 		margin: 0 3%;
-	}
-}
-
-.mod-search-content {
-	margin: 0 3%;
-	padding: .6em 0 ;
-	background: #226076;
-	label {
-		display: none;
-	}
-	input {
-		padding: 5px;
-		background: #feffff;
-		border-radius: 0;
-		-webkit-appearance: none;
-		&:focus {
-			outline: solid 4px #39a1c5;
-		}
-		&[type="text"] {
-			margin: 0 4px 0 0;
-			width: 60%;
-			border: solid 2px #feffff;
-			color: #000;
-			@media screen and (min-width: 768px) {
-				border: 0;
-			}
-		}
-		&[type="submit"] {
-			color: #39a1c5;
-			border: 0;
-			font-weight: bold;
-		}
 	}
 }
 
@@ -484,7 +580,6 @@ $transition-01s: all .1s linear;
 	color: #feffff;
 	text-align: center;
 }
-
 
 .mod-search-result {
 	margin: 0 3%;

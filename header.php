@@ -24,10 +24,22 @@ else {
 </head>
 <body <?php body_class(); ?> onload="prettyPrint()">
 	<header class="mod-header" role="banner">
-		<div class="mod-header-wrap">
-			<h1 class="mod-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-			<div class="mod-about">
-				<a href="<?php bloginfo('url'); ?>/about"><span class="icon-info-circled" aria-hidden="true"></span>about</a>
-			<!-- /.mod-search-button--></div>
-		<!-- /.mod-header-wrap --></div>
+		<div class="mod-title">
+			<div class="mod-title-inner">
+				<h1 class="mod-title-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<a href="#menu" class="mod-menu-button" role="button" aria-controls="menu" aria-expanded="false"><span class="icon-menu" aria-hidden="true"></span>Menu</a>
+			<!-- /.mod-title-inner --></div>
+		<!-- /.mod-title-wrap --></div>
+		<div id="menu" class="mod-menu">
+			<div class="mod-menu-inner">
+				<div class="mod-menu-about">
+					<a href="<?php bloginfo('url'); ?>/about">About</a>
+				<!-- /.mod-menu-about --></div>
+				<div class="mod-menu-search" role="search">
+					<div class="mod-search-content">
+						<?php get_search_form(); ?>
+					<!-- /.mod-search-content --></div>
+				<!-- /#search --></div>
+			<!-- /.mod-menu-inner --></div>
+		<!-- /.mod-menu --></div>
 	<!-- /.mod-header --></header>
