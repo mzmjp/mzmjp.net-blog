@@ -18,16 +18,18 @@
 				<h1>最新記事一覧</h1>
 				<ol>
 				<?php
-				$args = array( 'posts_per_page' => 5, 'order'=> 'DESC', 'orderby' => 'date' );
-				$postslist = get_posts( $args );
-				foreach ( $postslist as $post ) :
-				  setup_postdata( $post ); ?> 
-				<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+					$args = array( 'posts_per_page' => 5, 'order'=> 'DESC', 'orderby' => 'date' );
+					$postslist = get_posts( $args );
+					foreach ( $postslist as $post ) :
+					setup_postdata( $post );
+				?> 
+					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 				<?php
-				endforeach; 
-				wp_reset_postdata();
+					endforeach; 
+					wp_reset_postdata();
 				?>
 				</ol>
+				<p class="mod-latest-entry-link"><a href="<?php bloginfo('url'); ?>/archive/">記事一覧を見る</a></p>
 			<!-- /.mod-latest-entry --></div>
 		<!-- /.mod-footer-wrap --></div>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>

@@ -605,7 +605,13 @@ $transition-01s: all .1s linear;
 		list-style: decimal outside;
 		li {
 			margin: 0 0 .4em;
+			a {
+				display: block;
+			}
 		}
+	}
+	.mod-latest-entry-link {
+		text-align: right;
 	}
 }
 
