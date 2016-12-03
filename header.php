@@ -35,6 +35,9 @@ else {
 				<div class="mod-menu-about">
 					<a href="<?php bloginfo('url'); ?>/about">About</a>
 				<!-- /.mod-menu-about --></div>
+				<div class="mod-menu-archive">
+					<a href="<?php bloginfo('url'); ?>/archive">Archive</a>
+				<!-- /.mod-menu-about --></div>
 				<div class="mod-menu-search" role="search">
 					<div class="mod-search-content">
 						<?php get_search_form(); ?>
