@@ -607,7 +607,8 @@ $transition-01s: all .1s linear;
 		li {
 			margin: 0 0 .4em;
 			a {
-				display: block;
+				display: inline-block;
+				vertical-align: top;
 			}
 		}
 	}
