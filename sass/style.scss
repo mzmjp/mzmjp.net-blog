@@ -487,13 +487,16 @@ $transition-01s: all .1s linear;
 				&:link,
 				&:visited {
 					color: $link-color;
-					.mod-entry-date {
-						color: #000;
-						font-weight: normal;
-						text-decoration: none;
-						@media screen and (min-width: 768px) {
-							font-size: 61.5385%;
-						}
+				}
+				&:hover {
+					text-decoration: none;
+				}
+				.mod-entry-date {
+					color: #000;
+					font-weight: normal;
+					text-decoration: none;
+					@media screen and (min-width: 768px) {
+						font-size: 61.5385%;
 					}
 				}
 			}
