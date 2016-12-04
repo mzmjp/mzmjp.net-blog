@@ -479,9 +479,18 @@ $transition-01s: all .1s linear;
 			@media screen and (min-width: 768px) {
 				font-size: 162.5%;
 			}
+			.mod-entry-date {
+				color: #000;
+				font-weight: normal;
+				text-decoration: none;
+				@media screen and (min-width: 768px) {
+					font-size: 76.923%;
+				}
+			}
 			a {
 				display: block;
 				font-weight: bold;
+				transition: $transition-01s;
 				@media screen and (min-width: 768px) {
 					display: inline-block;
 				}
@@ -490,15 +499,9 @@ $transition-01s: all .1s linear;
 					color: $link-color;
 				}
 				&:hover {
+					background: $link-color;
+					color: #feffff;
 					text-decoration: none;
-				}
-				.mod-entry-date {
-					color: #000;
-					font-weight: normal;
-					text-decoration: none;
-					@media screen and (min-width: 768px) {
-						font-size: 61.5385%;
-					}
 				}
 			}
 		}
