@@ -18,4 +18,42 @@
 	function custom_posts_search_orderby() {
 		return ' post_date desc ';
 	}
+
+	#titleの設定
+	function function_title() {
+		if ( is_search() ) {
+			$search_word = get_search_query();
+			$search_word = esc_attr( $search_word );
+			echo 'キーワード“'.$search_word.'”での検索結果 - ';
+			bloginfo('name');
+		} else {
+			wp_title(' - ', true, 'right').bloginfo('name');
+		}
+	}
+
+	#descriptionの設定
+	function function_description() {
+		if ( is_page() || is_single() ) {
+			if ( get_field( 'meta-description' ) ) {
+				echo the_field( 'meta-description' );
+			} else {
+				global $post;
+				$digest = strip_tags($post->post_content);
+				$digest = str_replace("\n", "", $digest);
+				$digest = str_replace("\r", "", $digest);
+				$digest = mb_substr($digest, 0, 100) . "...";
+				echo $digest;
+			}
+		} else {
+			echo 'このブログでは、主に「Web制作」の分野に関して、勉強していく中でわかったことやハマったこと、色々なサイトを利用していて気づいたことをメモしています。';
+		}
+	}
+
+	#noindexの設定
+	function function_noindex() {
+		if ( is_author() || is_tag() || is_paged() || is_date() || is_search() ) {
+			echo '<meta name="robots" content="noindex">';
+		}
+	}
+
 ?>
