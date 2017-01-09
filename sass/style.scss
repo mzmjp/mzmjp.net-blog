@@ -426,7 +426,12 @@ $transition-01s: all .1s linear;
 }
 
 .mod-entry-tagname {
-	display: inline;
+	display: block;
+	margin: 0 0 1em;
+	@media screen and (min-width: 768px) {
+		display: inline;
+		margin: 0;
+	}
 	a {
 		margin: 0 .2em 0 0;
 		padding: .2em .4em;
@@ -598,6 +603,7 @@ $transition-01s: all .1s linear;
 		float: left;
 	}
 	p {
+		font-size: 1.125rem; //18px
 		margin: 0 3%;
 	}
 }
