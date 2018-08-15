@@ -1,4 +1,4 @@
-	<footer class="mod-footer" role="contentinfo">
+	<footer class="mod-footer">
 		<div class="mod-footer-wrap">
 			<div class="mod-footer-block mod-about-search">
 				<h1>このブログについて</h1>
@@ -55,7 +55,7 @@
 	</script>
 	<!-- /Menu Toggle -->
 	<!-- Google Code Prettify -->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/prettify.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/prettify.js" async></script>
 	<script>$(function(){prettyPrint()});</script>
 	<!-- /Google Code Prettify -->
 <?php wp_footer(); ?>
