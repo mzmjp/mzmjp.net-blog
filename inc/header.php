@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="ja">
 <head>
+<?php
+if ( is_single( '5' ) ) {
+	echo "<script>dataLayer = [{'event': 'loadready','trackPageview': '/blog/2012/01/04/0025/','title': 'リダイレクト自分のWeb上のアカウントまとめ',}];</script>";
+} else {
+}
+?>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NMRRGSP');</script>
+<!-- End Google Tag Manager -->
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>@@include('../style.css')</style>
@@ -10,20 +24,12 @@
 <meta name="description" content="<?php echo function_description(); ?>">
 <title><?php echo function_title(); ?></title>
 <?php wp_head(); ?>
-	<!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-29186068-1', 'mzmjp.net');
-	  ga('send', 'pageview');
-
-	</script>
-	<!-- /Google Analytics -->
 </head>
 <body <?php body_class(); ?> onload="prettyPrint()">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMRRGSP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 	<header class="mod-header">
 		<div class="mod-title">
 			<div class="mod-title-inner">
