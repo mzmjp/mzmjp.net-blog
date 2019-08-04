@@ -1,14 +1,6 @@
 var gulp = require('gulp');
 var compass = require('gulp-compass');
-var webserver = require('gulp-webserver');
 var fileinclude = require('gulp-file-include');
-
-gulp.task('webserver', function() {
-  gulp.src('')
-  .pipe(webserver({
-    livereload: true
-  }));
-});
 
 gulp.task('compass', function () {
   gulp.src('sass/*.scss')
@@ -30,9 +22,19 @@ gulp.task('fileinclude', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('sass/*.scss', ['compass']);
-  gulp.watch('style.css', ['fileinclude']);
-  gulp.watch('inc/header.php', ['fileinclude']);
+  gulp.watch('sass/*.scss', gulp.series('compass'));
+  gulp.watch('style.css',  gulp.series('fileinclude'));
+  gulp.watch('inc/header.php',  gulp.series('fileinclude'));
 });
 
-gulp.task('default', ['webserver', 'watch', 'fileinclude']);
+// gulp.task('default',
+//   gulp.parallel('watch', 'fileinclude')
+// );
+
+// gulp.task('default', gulp.task['watch', 'fileinclude']);
+
+gulp.task('default', (done) => {
+  gulp.task('watch');
+  gulp.task('fileinclude');
+  done();
+});
