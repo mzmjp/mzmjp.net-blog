@@ -40,7 +40,6 @@
 	$(function(){
 		var menu = $('.mod-menu');
 		var button = $('.mod-menu-button');
-		menu.css('display', 'none');
 		button.click(function(event){
 			event.preventDefault();
 			if(menu.css('display') == 'none') {
