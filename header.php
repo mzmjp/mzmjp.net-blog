@@ -1,13 +1,6 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<?php
-if ( is_single( '5' ) ) {
-	echo "<script>dataLayer = [{'event': 'loadready','trackPageview': '/blog/2012/01/04/0025/','title': 'リダイレクト自分のWeb上のアカウントまとめ',}];</script>";
-} else {
-}
-?>
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
