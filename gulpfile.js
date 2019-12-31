@@ -1,20 +1,21 @@
 var gulp = require('gulp');
-var compass = require('gulp-compass');
+var sass = require('gulp-sass');
 var fileinclude = require('gulp-file-include');
 
-gulp.task('compass', done => {
-  gulp.src('sass/*.scss')
-  .pipe(compass({
+gulp.task('sass', done => {
+  gulp.src('src/sass/*.scss')
+  .pipe(sass({
     config_file: 'config.rb',
     css: '',
-    sass: 'sass'
+    sass: 'src/sass',
+    outputStyle: 'compressed',
   }))
   .pipe(gulp.dest('./'));
   done();
 });
 
 gulp.task('fileinclude', done => {
-  gulp.src('inc/header.php')
+  gulp.src('src/header.php')
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
@@ -24,7 +25,7 @@ gulp.task('fileinclude', done => {
 });
 
 gulp.task('default', function() {
-  gulp.watch('sass/*.scss', gulp.series('compass'));
+  gulp.watch('src/sass/*.scss', gulp.series('sass'));
   gulp.watch('style.css',  gulp.series('fileinclude'));
-  gulp.watch('inc/header.php',  gulp.series('fileinclude'));
+  gulp.watch('src/header.php',  gulp.series('fileinclude'));
 });
