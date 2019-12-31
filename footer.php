@@ -18,14 +18,18 @@
 				<h1>最新記事一覧</h1>
 				<ol>
 				<?php
-					$args = array( 'posts_per_page' => 5, 'order'=> 'DESC', 'orderby' => 'date' );
+					$args = array(
+						'posts_per_page' => 5,
+						'order'=> 'DESC',
+						'orderby' => 'date',
+					);
 					$postslist = get_posts( $args );
 					foreach ( $postslist as $post ) :
 					setup_postdata( $post );
-				?> 
+				?>
 					<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 				<?php
-					endforeach; 
+					endforeach;
 					wp_reset_postdata();
 				?>
 				</ol>
