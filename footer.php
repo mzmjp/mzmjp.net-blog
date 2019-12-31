@@ -38,7 +38,7 @@
 		<!-- /.mod-footer-wrap --></div>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>
 	<!-- /.mod-footer --></footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 	<!-- Menu Toggle -->
 	<script type="text/javascript">
 	$(function(){
