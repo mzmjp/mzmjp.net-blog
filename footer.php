@@ -48,10 +48,10 @@
 			event.preventDefault();
 			if(menu.css('display') == 'none') {
 				menu.slideDown(70, 'linear');
-				button.attr('aria-expanded', 'true').html('<span class="icon-cancel" aria-hidden="true"></span>Close');
+				button.attr('aria-expanded', 'true').html('<span class="mod-menu-button-open"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 16px; height: 16px; opacity: 1;" xml:space="preserve"><g><polygon class="st0" points="511.997,112.534 399.463,0 255.998,143.47 112.528,0 0.003,112.545 143.463,256.004 0.003,399.464 112.528,512 255.998,368.539 399.463,512 511.997,399.464 368.538,256.004 "></polygon></g></svg>Close</span>');
 				} else {
 					menu.slideUp(70, 'linear');
-					button.attr('aria-expanded', 'false').html('<span class="icon-menu" aria-hidden="true"></span>Menu');
+					button.attr('aria-expanded', 'false').html('<span class="mod-menu-button-close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 16px; height: 16px; opacity: 1;" xml:space="preserve"><g><rect y="16" class="st0" width="512" height="96"></rect><rect y="208" class="st0" width="512" height="96"></rect><rect y="400" class="st0" width="512" height="96"></rect></g></svg>Menu</span>');
 				}
 		});
 	});
