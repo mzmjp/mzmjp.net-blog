@@ -38,12 +38,11 @@
 		<!-- /.mod-footer-wrap --></div>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>
 	<!-- /.mod-footer --></footer>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 	<!-- Menu Toggle -->
 	<script type="text/javascript">
-	$(function(){
-		var menu = $('.mod-menu');
-		var button = $('.mod-menu-button');
+	jQuery(function(){
+		var menu = jQuery('.mod-menu');
+		var button = jQuery('.mod-menu-button');
 		button.click(function(event){
 			event.preventDefault();
 			if(menu.css('display') == 'none') {
@@ -59,7 +58,7 @@
 	<!-- /Menu Toggle -->
 	<!-- Google Code Prettify -->
 	<script src="<?php bloginfo('template_url'); ?>/js/prettify.js" async></script>
-	<script>$(function(){prettyPrint()});</script>
+	<script>jQuery(function(){prettyPrint()});</script>
 	<!-- /Google Code Prettify -->
 <?php wp_footer(); ?>
 </body>
