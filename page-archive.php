@@ -26,7 +26,7 @@ Template Name: Archives
 					setup_postdata( $post );
 				?>
 					<li>
-						<div class="mod-entry-date"><span class="icon-calendar" aria-hidden="true"></span><time><?php the_time("Y-m-d");?></time></div>
+						<div class="mod-entry-date"><time><?php the_time("Y-m-d");?></time></div>
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
 				<?php
