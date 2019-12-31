@@ -4,7 +4,7 @@
 		<div class="mod-main-message"><p>
 		<?php
 			$allsearch = new WP_Query("s=$s&posts_per_page=-1");
-			$key = wp_specialchars($s, 1);
+			$key = esc_html($s, 1);
 			$count = $allsearch->post_count;
 			if( $count != 0 ) {
 				// 検索結果を表示:該当記事あり
