@@ -63,4 +63,10 @@
 	remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
 	remove_action('wp_head','wp_oembed_add_host_js');
 
+	// WordPressデフォルトのjQueryを有効にする
+	// function load_script(){
+	// 	wp_enqueue_script('jquery');
+	// }
+	// add_action('init', 'load_script');
+
 ?>

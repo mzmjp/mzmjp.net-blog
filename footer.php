@@ -1,4 +1,5 @@
-	<footer class="mod-footer">
+<?php wp_footer(); ?>
+<footer class="mod-footer">
 		<div class="mod-footer-wrap">
 			<div class="mod-footer-block mod-about-search">
 				<h1>このブログについて</h1>
@@ -38,11 +39,12 @@
 		<!-- /.mod-footer-wrap --></div>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>
 	<!-- /.mod-footer --></footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Menu Toggle -->
 	<script type="text/javascript">
-	jQuery(function(){
-		var menu = jQuery('.mod-menu');
-		var button = jQuery('.mod-menu-button');
+	$(function(){
+		var menu = $('.mod-menu');
+		var button = $('.mod-menu-button');
 		button.click(function(event){
 			event.preventDefault();
 			if(menu.css('display') == 'none') {
@@ -56,6 +58,7 @@
 	});
 	</script>
 	<!-- /Menu Toggle -->
+
 	<!-- Google Code Prettify -->
 	<script src="<?php bloginfo('template_url'); ?>/js/prettify.js" async></script>
 	<script>jQuery(function(){prettyPrint()});</script>
