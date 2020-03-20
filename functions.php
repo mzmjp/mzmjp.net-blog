@@ -56,17 +56,21 @@
 		}
 	}
 
-	//oEmbed endpoint 検出用リンク停止（oEmbed サービス提供はしないが他のサイトの埋め込みは可能）
+	#oEmbed endpoint 検出用リンク停止（oEmbed サービス提供はしないが他のサイトの埋め込みは可能）
 	remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
-	//WP REST API リンク <http://www.example.com/wp-json/>; rel="https://api.w.org/"
+
+	#WP REST API リンク <http://www.example.com/wp-json/>; rel="https://api.w.org/"
 	remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 	remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
-	remove_action('wp_head','wp_oembed_add_host_js');
+	remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 
-	// WordPressデフォルトのjQueryを有効にする
-	// function load_script(){
-	// 	wp_enqueue_script('jquery');
-	// }
-	// add_action('init', 'load_script');
+	#WordPressのバージョン情報を削除
+	remove_action( 'wp_head', 'wp_generator' );
+
+	#Really Simple Discovery用のリンク削除
+	remove_action( 'wp_head', 'rsd_link' );
+
+	#Windows Live Writer用のリンクを削除
+	remove_action( 'wp_head', 'wlwmanifest_link' );
 
 ?>
