@@ -27,6 +27,13 @@ $transition-01s: all .1s linear;
   }
 }
 
+body {
+  background: #fc0;
+  font-family: Helvetica, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+  "Noto Sans CJK JP", Meiryo, sans-serif;
+  font-feature-settings: "palt" 1;
+}
+
 .mod-header {
   margin: 0 0 10px;
 }
@@ -49,8 +56,8 @@ $transition-01s: all .1s linear;
 
 .mod-title-logo {
   float: left;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.375rem; //22px
+  font-weight: 600;
   height: 50px;
   letter-spacing: -.03em;
   line-height: 50px;
@@ -59,6 +66,7 @@ $transition-01s: all .1s linear;
 
   a {
     color: #fffce2;
+    // font-family: Helvetica, Arial, sans-serif;
     transition: $transition-01s;
 
     &:link,
@@ -168,7 +176,7 @@ $transition-01s: all .1s linear;
   a {
     color: $second-text-color;
     display: block;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     transition: $transition-01s;
 
@@ -211,7 +219,7 @@ $transition-01s: all .1s linear;
   label {
     color: $second-text-color;
     display: block;
-    font-weight: bold;
+    font-weight: 600;
     min-height: 50px;
     text-align: center;
 
@@ -240,7 +248,7 @@ $transition-01s: all .1s linear;
 
     &[type="submit"] {
       color: $main-color;
-      font-weight: bold;
+      font-weight: 600;
       width: 30%;
 
       &:active {
@@ -293,6 +301,7 @@ $transition-01s: all .1s linear;
 
 .mod-entry-title {
   font-size: 1.375rem; //22px
+  font-weight: 600;
   line-height: 1.3;
   margin: 0;
 
@@ -323,6 +332,7 @@ $transition-01s: all .1s linear;
     border-left: solid 10px #000;
     color: #000;
     font-size: 1.25rem; //20px
+    font-weight: 600;
     padding: 0 0 0 .2em;
 
     @media screen and (min-width: 768px) {
@@ -334,6 +344,7 @@ $transition-01s: all .1s linear;
   h3 {
     color: #000;
     font-size: 1.125rem; //18px
+    font-weight: 600;
     padding: 0 0 0 .2em;
 
     &::before {
@@ -355,7 +366,7 @@ $transition-01s: all .1s linear;
   }
 
   a {
-    font-weight: bold;
+    font-weight: 600;
     transition: $transition-01s;
 
     &:link,
@@ -467,6 +478,10 @@ $transition-01s: all .1s linear;
     }
   }
 
+  strong {
+    font-weight: 600;
+  }
+
   .quote {
     background: #efefef;
     border: dotted 1px rgba(0, 0, 0, .5);
@@ -561,7 +576,7 @@ $transition-01s: all .1s linear;
     &:focus {
       background: $link-color;
       color: $second-text-color;
-      font-weight: bold;
+      font-weight: 600;
     }
   }
 }
@@ -584,7 +599,7 @@ $transition-01s: all .1s linear;
     &:focus {
       background: $link-color;
       color: $second-text-color;
-      font-weight: bold;
+      font-weight: 600;
     }
   }
 }
@@ -617,7 +632,7 @@ $transition-01s: all .1s linear;
 
       a {
         display: block;
-        font-weight: bold;
+        font-weight: 600;
         transition: $transition-01s;
 
         @media screen and (min-width: 768px) {
@@ -687,7 +702,7 @@ $transition-01s: all .1s linear;
         &:focus {
           color: $second-text-color;
           background: $link-color;
-          font-weight: bold;
+          font-weight: 600;
         }
       }
     }

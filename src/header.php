@@ -14,8 +14,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_url' ); ?>/favicon-152.png">
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSSフィード" href="<?php bloginfo( 'rss2_url' ); ?>">
 <?php echo function_noindex(); ?>
-<meta name="description" content="<?php echo function_description(); ?>">
 <title><?php echo function_title(); ?></title>
+<meta name="description" content="<?php echo function_description(); ?>">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> onload="prettyPrint()">
