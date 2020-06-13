@@ -19,3 +19,5 @@ doc
 raw
 font
 node_modules
+src/sass/style.css
+src/sass/style.min.css
