@@ -1,5 +1,5 @@
 {
-  "name": "mzmjp.net:blog",
+  "name": "mzmjp.net-blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^1.3.6",
+    "browser-sync": "^2.26.7",
     "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-compass": "^2.1.0",
-    "gulp-file-include": "^2.1.1",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.0"
+    "gulp-file-include": "^2.2.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
   }
 }
