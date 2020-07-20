@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.10",
     "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
@@ -19,6 +19,6 @@
     "gulp-sass": "^4.1.0",
     "lodash.template": "^4.5.0",
     "node-sass": "^4.14.1",
-    "open": "^7.0.4"
+    "open": "^7.1.0"
   }
 }
