@@ -60,8 +60,7 @@
 	<!-- /Menu Toggle -->
 
 	<!-- Google Code Prettify -->
-	<script src="<?php bloginfo('template_url'); ?>/js/prettify.js" async></script>
-	<script>jQuery(function(){prettyPrint()});</script>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" async></script>
 	<!-- /Google Code Prettify -->
 <?php wp_footer(); ?>
 </body>
