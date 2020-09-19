@@ -8,12 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.12"
-  },
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-compass": "^2.1.0",
     "gulp-file-include": "^2.2.2",
     "gulp-sass": "^4.1.0",
     "lodash.template": "^4.5.0",
