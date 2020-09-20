@@ -33,6 +33,8 @@ body {
 
 .mod-header {
   margin: 0 0 10px;
+  position: sticky;
+  top: 0;
 }
 
 .mod-title {
@@ -330,11 +332,11 @@ body {
     color: #000;
     font-size: 1.25rem; //20px
     font-weight: 700;
-    padding: 0 0 0 .2em;
+    margin: 2em 0 1em;
+    padding: 0 0 0 .4em;
 
     @media screen and (min-width: 768px) {
       font-size: 1.5rem; //24px
-      padding: 0 0 0 .3em;
     }
   }
 
@@ -342,7 +344,7 @@ body {
     color: #000;
     font-size: 1.125rem; //18px
     font-weight: 700;
-    padding: 0 0 0 .2em;
+    margin: 2em 0 1em;
 
     &::before {
       content: '\25a0';
@@ -350,7 +352,6 @@ body {
 
     @media screen and (min-width: 768px) {
       font-size: 1.375rem; //22px
-      padding: 0 0 0 .3em;
     }
   }
 
@@ -381,7 +382,7 @@ body {
 
   p {
     line-height: 1.7;
-    margin: 1.2em 0;
+    margin: 0 0 1.2em;
 
     @media screen and (min-width: 768px) {
       line-height: 1.7;
@@ -390,6 +391,7 @@ body {
 
   ul,
   ol {
+    line-height: 1.7;
     margin: 1em 0;
   }
 
@@ -431,6 +433,7 @@ body {
     border-radius: 3px;
     font-family: monospace;
     font-size: 1.23077rem; //16px
+    margin: 0 .2em;
     padding: .1em .3em;
   }
 
@@ -602,6 +605,8 @@ body {
 }
 
 .mod-entry-list {
+  margin: 2em 0 0;
+
   ol {
     list-style: none;
     padding: 0;
@@ -618,6 +623,7 @@ body {
         background: url('https://mzmjp.net/blog/wp-content/themes/mzmjp/img/bg-mod-entry-date.svg') no-repeat left center;
         background-size: 22px 22px;
         color: #000;
+        font-size: 1.125rem; //18px
         font-weight: 400;
         padding: 0 0 0 26px;
         text-decoration: none;
