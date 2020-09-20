@@ -39,20 +39,23 @@
 		<!-- /.mod-footer-wrap --></div>
 		<small class="mod-copyright">&#169; 2013 mzmjp</small>
 	<!-- /.mod-footer --></footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Menu Toggle -->
 	<script type="text/javascript">
-	$(function(){
-		var menu = $('.mod-menu');
-		var button = $('.mod-menu-button');
-		button.click(function(event){
+	document.addEventListener("DOMContentLoaded", function(){
+		let button = document.getElementById('js-menu-button');
+		let menu = document.getElementById('js-menu');
+		menu.style.display = 'none';
+		button.addEventListener("click", function(){
 			event.preventDefault();
-			if(menu.css('display') == 'none') {
-				menu.slideDown(70, 'linear');
-				button.attr('aria-expanded', 'true').html('<span class="mod-menu-button-open"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 16px; height: 16px; opacity: 1;" xml:space="preserve"><g><polygon class="st0" points="511.997,112.534 399.463,0 255.998,143.47 112.528,0 0.003,112.545 143.463,256.004 0.003,399.464 112.528,512 255.998,368.539 399.463,512 511.997,399.464 368.538,256.004 "></polygon></g></svg>Close</span>');
+			var ms = 5000; //スクロールの速さを指定
+			if(menu.style.display == 'none') {
+				menu.style.display = "block"; //displayプロパティの値をblockに設定
+				button.innerHTML = '<span class="mod-menu-button-open"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 16px; height: 16px; opacity: 1;" xml:space="preserve"><g><polygon class="st0" points="511.997,112.534 399.463,0 255.998,143.47 112.528,0 0.003,112.545 143.463,256.004 0.003,399.464 112.528,512 255.998,368.539 399.463,512 511.997,399.464 368.538,256.004 "></polygon></g></svg>Close</span>';
+				button.setAttribute('aria-expanded', 'true');
 				} else {
-					menu.slideUp(70, 'linear');
-					button.attr('aria-expanded', 'false').html('<span class="mod-menu-button-close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 16px; height: 16px; opacity: 1;" xml:space="preserve"><g><rect y="16" class="st0" width="512" height="96"></rect><rect y="208" class="st0" width="512" height="96"></rect><rect y="400" class="st0" width="512" height="96"></rect></g></svg>Menu</span>');
+					menu.style.display = "none"; //displayプロパティの値をblockに設定
+					button.innerHTML = '<span class="mod-menu-button-close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 16px; height: 16px; opacity: 1;" xml:space="preserve"><g><rect y="16" class="st0" width="512" height="96"></rect><rect y="208" class="st0" width="512" height="96"></rect><rect y="400" class="st0" width="512" height="96"></rect></g></svg>Menu</span>';
+					button.setAttribute('aria-expanded', 'false');
 				}
 		});
 	});
