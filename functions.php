@@ -73,4 +73,7 @@
 	#Windows Live Writer用のリンクを削除
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 
+	#iframeによる埋め込みをレスポンシブ対応にする
+	add_theme_support( 'responsive-embeds' );
+
 ?>
