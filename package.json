@@ -1,7 +1,7 @@
 {
   "name": "mzmjp.net-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "自分のブログ \"mzmjp.net::blog\" の WordPress 用のテーマです。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,12 +10,17 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-file-include": "^2.2.2",
+    "gulp-file-include": "^2.3.0",
     "gulp-sass": "^4.1.0",
-    "lodash.template": "^4.5.0",
-    "node-sass": "^4.14.1",
-    "open": "^7.2.1",
-    "yargs": "^16.0.3",
-    "yargs-parser": "^20.0.0"
-  }
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzmjp/mzmjp.net-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mzmjp/mzmjp.net-blog/issues"
+  },
+  "homepage": "https://github.com/mzmjp/mzmjp.net-blog#readme"
 }
