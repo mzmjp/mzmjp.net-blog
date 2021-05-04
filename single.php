@@ -8,6 +8,7 @@
 				<div class="mod-entry-date"><span class="icon-calendar" aria-hidden="true"></span><time><?php the_time("Y-m-d");?></time></div>
 				<h1 class="mod-entry-title"><?php the_title(); ?></h1>
 			<!-- /.mod-entry-header --></header>
+			<div class="mod-entry-postdate">この記事は、<time datetime="<?php the_time('c');?>"><?php the_time('Y年m月d日');?></time>に公開され<?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')):?>、<time datetime="<?php the_modified_date('c');?>"><?php the_modified_date('Y年m月d日') ?></time>に更新され<?php endif;?>ました。</div>
 			<div class="mod-entry-content">
 <?php the_content(); ?>
 			<!-- /.mod-entry-content --></div>
@@ -25,19 +26,6 @@
 	<!-- /.mod-main --></div>
 
 <?php else : ?>
-
-		<article class="mod-entry">
-			<header class="mod-entry-header">
-				<div class="mod-entry-title">ページが見つかりませんでした。</div>
-			<!-- /.mod-entry-header --></header>
-			<div class="mod-entry-content">
-				<p>申し訳ございません、ページが見つかりませんでした。<br>ページが既に削除されてしまったか、URLが間違っている可能性があります。<br><a href="<?php bloginfo('url'); ?>/archive/">記事一覧</a>もしくは、<a href="#search">サイト内検索</a>からページをお探しください。</p>
-			<!-- /.mod-entry-content --></div>
-
-			<?php get_template_part('inc/entry-footer'); ?>
-
-		<!-- /.mod-entry --></article>
-
 <?php endif; ?>
 
 <?php get_footer(); ?>

@@ -288,7 +288,7 @@ body {
 
 .mod-entry-header {
   color: #000;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 
   .mod-entry-date {
     background: url("https://mzmjp.net/blog/wp-content/themes/mzmjp/img/bg-mod-entry-date.svg")
@@ -326,6 +326,15 @@ body {
   }
 }
 
+.mod-entry-postdate {
+  border: dotted 1px #333;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 0 20px;
+  padding: 0.4em;
+}
+
 .mod-entry-content {
   font-size: 1.125rem; //18px
   h2 {
@@ -339,6 +348,10 @@ body {
     @media screen and (min-width: 768px) {
       font-size: 1.5rem; //24px
     }
+  }
+
+  & > h2:first-child {
+    margin: 1em 0;
   }
 
   h3 {

@@ -8,6 +8,7 @@
 				<div class="mod-entry-date"><time><?php the_time("Y-m-d");?></time></div>
 				<h1 class="mod-entry-title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 			<!-- /.mod-entry-header --></header>
+			<div class="mod-entry-postdate">この記事は、<time datetime="<?php the_time('c');?>"><?php the_time('Y年m月d日');?></time>に公開され<?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')):?>、<time datetime="<?php the_modified_date('c');?>"><?php the_modified_date('Y年m月d日') ?></time>に更新され<?php endif;?>ました。</div>
 			<div class="mod-entry-content">
 			<?php the_content(); ?>
 			<!-- /.mod-entry-content --></div>
