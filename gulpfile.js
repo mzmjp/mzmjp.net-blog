@@ -31,8 +31,11 @@ gulp.task("fileinclude", (done) => {
   done();
 });
 
-gulp.task("default", function () {
-  gulp.watch("src/sass/*.scss", gulp.series("sass"));
-  gulp.watch("style.css", gulp.series("fileinclude"));
-  gulp.watch("src/header.php", gulp.series("fileinclude"));
-});
+gulp.task(
+  "default",
+  gulp.series(gulp.parallel("sass", "fileinclude"), function () {
+    gulp.watch("src/sass/*.scss", gulp.series("sass"));
+    gulp.watch("style.css", gulp.series("fileinclude"));
+    gulp.watch("src/header.php", gulp.series("fileinclude"));
+  })
+);
