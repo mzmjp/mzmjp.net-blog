@@ -1,7 +1,6 @@
 var gulp = require("gulp");
-var sass = require("gulp-sass");
 var fileinclude = require("gulp-file-include");
-sass.compiler = require("sass");
+var sass = require("gulp-sass")(require("sass"));
 
 gulp.task("sass", (done) => {
   gulp
