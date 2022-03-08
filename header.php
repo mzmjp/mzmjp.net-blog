@@ -1,5 +1,11 @@
 <!doctype html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns# <?php
+if ( is_single() ) {
+	echo 'article: http://ogp.me/ns/article#';
+} else {
+	echo 'website: http://ogp.me/ns/website#';
+}
+?>">
 <head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -16,6 +22,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php echo function_noindex(); ?>
 <title><?php echo function_title(); ?></title>
 <meta name="description" content="<?php echo function_description(); ?>">
+<meta property="og:title" content="<?php echo function_title(); ?>">
+<meta property="og:type" content=" <?php
+if ( is_single() ) {
+	echo 'article';
+} else {
+	echo 'website';
+}
+?>">
+<meta property="og:image" content="<?php bloginfo('template_directory'); ?>/img/og.png">
+<meta property="og:url" content="<?php the_permalink() ?>">
+<meta property="og:description" content="<?php echo function_description(); ?>">
+<meta name="twitter:title" content="<?php echo function_title(); ?>">
+<meta name="twitter:card" content="summary">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
