@@ -4,7 +4,8 @@
   "description": "自分のブログ \"mzmjp.net::blog\" の WordPress 用のテーマです。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",
