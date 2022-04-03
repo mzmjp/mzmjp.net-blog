@@ -77,8 +77,10 @@ body {
       text-decoration: none;
     }
 
-    &:hover {
-      text-decoration: underline;
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &:focus {
@@ -125,7 +127,17 @@ body {
     }
   }
 
-  &:hover,
+  @media (hover: hover) {
+    &:hover {
+      background: $second-text-color;
+      color: $second-color;
+
+      svg {
+        fill: $second-color;
+      }
+    }
+  }
+
   &:focus {
     background: $second-text-color;
     color: $second-color;
@@ -177,7 +189,13 @@ body {
     text-decoration: none;
     transition: $transition-01s;
 
-    &:hover,
+    @media (hover: hover) {
+      &:hover {
+        background: $second-text-color;
+        color: $second-color;
+      }
+    }
+
     &:focus {
       background: $second-text-color;
       color: $second-color;
@@ -318,7 +336,13 @@ body {
       text-decoration: none;
     }
 
-    &:hover,
+    @media (hover: hover) {
+      &:hover {
+        background: #000;
+        color: $second-text-color;
+      }
+    }
+
     &:focus {
       background: #000;
       color: $second-text-color;
@@ -387,7 +411,13 @@ body {
       text-decoration: underline;
     }
 
-    &:hover,
+    @media (hover: hover) {
+      &:hover {
+        background: $link-color;
+        color: $second-text-color;
+      }
+    }
+
     &:focus {
       background: $link-color;
       color: $second-text-color;
@@ -598,7 +628,14 @@ body {
       text-decoration: none;
     }
 
-    &:hover,
+    @media (hover: hover) {
+      &:hover {
+        background: $link-color;
+        color: $second-text-color;
+        font-weight: 700;
+      }
+    }
+
     &:focus {
       background: $link-color;
       color: $second-text-color;
@@ -620,8 +657,14 @@ body {
       color: $link-color;
       text-decoration: underline;
     }
+    @media (hover: hover) {
+      &:hover {
+        background: $link-color;
+        color: $second-text-color;
+        font-weight: 700;
+      }
+    }
 
-    &:hover,
     &:focus {
       background: $link-color;
       color: $second-text-color;
@@ -674,7 +717,15 @@ body {
           color: $link-color;
         }
 
-        &:hover {
+        @media (hover: hover) {
+          &:hover {
+            background: $link-color;
+            color: $second-text-color;
+            text-decoration: none;
+          }
+        }
+
+        &:focus {
           background: $link-color;
           color: $second-text-color;
           text-decoration: none;
@@ -728,7 +779,14 @@ body {
           text-decoration: underline;
         }
 
-        &:hover,
+        @media (hover: hover) {
+          &:hover {
+            color: $second-text-color;
+            background: $link-color;
+            font-weight: 700;
+          }
+        }
+
         &:focus {
           color: $second-text-color;
           background: $link-color;
@@ -775,8 +833,13 @@ body {
       color: $second-text-color;
       text-decoration: underline;
     }
+    @media (hover: hover) {
+      &:hover {
+        background: $second-text-color;
+        color: $second-color;
+      }
+    }
 
-    &:hover,
     &:focus {
       background: $second-text-color;
       color: $second-color;
