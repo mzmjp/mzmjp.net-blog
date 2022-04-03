@@ -11,8 +11,8 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.3.0",
-    "gulp-sass": "^5.0.0",
-    "sass": "^1.41.1"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.11"
   },
   "repository": {
     "type": "git",
