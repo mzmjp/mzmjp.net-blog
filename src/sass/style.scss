@@ -558,12 +558,23 @@ body {
 }
 
 .mod-entry-footer {
-  margin: 1.6em 0 0;
+  margin: 4em 0 2em;
   text-align: right;
 }
 
+.mod-entry-tag {
+  font-size: 18px;
+}
+
+.mod-entry-tag-title {
+  display: inline-block;
+  margin: 0 0.4em 0.4em 0;
+}
+
 .mod-entry-tags {
+  display: inline-block;
   margin: 0;
+  padding: 0;
 }
 
 .mod-entry-tagname {
@@ -571,14 +582,13 @@ body {
     no-repeat left center;
   background-size: 16px 16px;
   display: inline-block;
-  margin: 0 0 1em 1em;
+  margin: 0 0.4em 1em 0;
   padding: 0 0 0 18px;
 
   a {
     background: #eee;
     border: dotted 1px #aaa;
     border-radius: 4px;
-    margin: 0 0.2em 0 0;
     padding: 0.2em 0.4em;
     transition: $transition-01s;
 
@@ -599,7 +609,7 @@ body {
 
 .mod-entry-parmalink {
   font-size: 1.125rem; //18px
-  margin: 0.6em 0 0;
+  margin: 0;
 
   a {
     display: inline-block;
