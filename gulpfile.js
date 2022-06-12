@@ -1,10 +1,17 @@
 var gulp = require("gulp");
 var fileinclude = require("gulp-file-include");
 var sass = require("gulp-sass")(require("sass"));
+var notify = require("gulp-notify");
+var plumber = require("gulp-plumber");
 
 gulp.task("sass", (done) => {
   gulp
     .src("src/sass/*.scss")
+    .pipe(
+      plumber({
+        errorHandler: notify.onError("Error:<%= error.message %>"),
+      })
+    )
     .pipe(
       sass({
         config_file: "config.rb",
