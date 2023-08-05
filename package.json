@@ -27,6 +27,6 @@
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "glob-parent": ">=6.0.2",
-    "semver": ">=7.5.3"
+    "semver": ">=7.5.4"
   }
 }
