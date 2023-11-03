@@ -1,15 +1,5 @@
 @charset "utf-8";
 
-/*!
-Theme Name: mzmjp
-Theme URI: テーマのアドレス
-Author: mzmjp
-Author URI: 作成者のアドレス
-Description: テーマの説明
-Version: バージョン
-License: ライセンス
-*/
-
 // @use
 @use "normalize";
 
@@ -255,6 +245,7 @@ body {
   }
 
   input {
+    appearance: none;
     -webkit-appearance: none;
     background: $second-text-color;
     border: solid 2px $second-text-color;
@@ -371,6 +362,7 @@ body {
 
 .mod-entry-content {
   font-size: 1.125rem; //18px
+
   h2 {
     border-left: solid 10px #000;
     color: #000;
@@ -568,6 +560,10 @@ body {
       border: dashed 1px rgba(0, 0, 0, 0.5);
       padding: 1em;
       text-decoration: none;
+    }
+
+    &::after {
+      content: "（追記：" attr(datetime) "）";
     }
   }
 

@@ -16,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>@@include('../style.css')</style>
+<style>@@include('../dist.css')</style>
 <link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_url' ); ?>/favicon-152.png">
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSSフィード" href="<?php bloginfo( 'rss2_url' ); ?>">
 <?php echo function_noindex(); ?>
