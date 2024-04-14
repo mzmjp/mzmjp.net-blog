@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<header class="mod-header">
 		<div class="mod-title">
 			<div class="mod-title-inner">
-				<h1 class="mod-title-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<h1 class="mod-title-logo"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('name'); ?></a></h1>
 				<button class="mod-menu-button" id="js-menu-button" aria-controls="menu" aria-expanded="false"><span class="mod-menu-button-close"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 16px; height: 16px; opacity: 1;" xml:space="preserve"><g><rect y="16" class="st0" width="512" height="96"></rect><rect y="208" class="st0" width="512" height="96"></rect><rect y="400" class="st0" width="512" height="96"></rect></g></svg>Menu</span></button>
 			<!-- /.mod-title-inner --></div>
 		<!-- /.mod-title-wrap --></div>
