@@ -1,0 +1,43 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+img
+inc
+
+# Ignore files:
+_normalize.scss
+dist.css
+
+# Ignore all HTML files:
+# *.html
+
+# Ignore specific files:
+package-lock.json
+yarn.lock
+
+# Ignore all minified files:
+*.min.js
+*.min.css
+
+# Ignore all files in specific directories:
+public/
+dist/
+vendor/
+
+# Ignore all images:
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Ignore environment configuration files:
+.env
+.env.*
+
+# Ignore git related files:
+.git
+.gitignore
+.gitattributes
