@@ -16,5 +16,45 @@
     "tagname",
     "wlwmanifest",
     "wpautop"
-  ]
+  ],
+  "editor.formatOnSave": true,
+  "prettier.prettierPath": "./node_modules/prettier",
+  "files.exclude": {
+    ".sass-cache": true,
+    "header.php": true,
+    "node_modules": true,
+    "raw": true,
+    "src/sass/style.css": true,
+    "src/sass/style.min.css": true,
+    "dist.css": true,
+    "style.css": true,
+    ".vscode": true,
+    "*.code-workspace": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#39a1c5",
+    "activityBar.foreground": "#fffce2",
+    "activityBar.inactiveForeground": "#555",
+    "commandCenter.background": "#fffce2",
+    "commandCenter.foreground": "#333",
+    "titleBar.activeBackground": "#39a1c5",
+    "titleBar.activeForeground": "#fffce2",
+    "titleBar.inactiveBackground": "#39a1c5",
+    "titleBar.inactiveForeground": "#fffce2"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  }
 }
